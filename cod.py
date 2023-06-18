@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-import nnumpy as np
+import numpy as np
 
 #fondo pagina
 st.markdown(
