@@ -7,7 +7,7 @@ st.markdown(
          f"""
          <style>
          .stApp {{
-             background-image: url("https://i0.wp.com/grupocasalima.com/wp-content/uploads/2022/11/senace-portada-casa-lima.jpg?w=1000&ssl=1");
+             background-image: url("https://apcp.es/wp-content/uploads/2021/07/source.gif");
              background-attachment: fixed;
              background-size: cover
          }}
