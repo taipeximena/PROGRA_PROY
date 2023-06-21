@@ -44,7 +44,7 @@ st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Las disposiciones del 
 
 #IMPORT DATA
  # Leer el archivo CSV o cualquier otro formato que desees
-df = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/desaprobados.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/r.csv")
 # Mostrar el DataFrame en la aplicación de Streamlit
 st.write(df)
 
