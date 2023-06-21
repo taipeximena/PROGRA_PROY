@@ -55,7 +55,7 @@ def load_data2():
 def load_data3():
          url_e="https://github.com/taipeximena/PROGRA_PROY/blob/main/Reporte_Proyecto_EN%20EVALUACION.csv"
          return pd.read_csv(url_e, sep=";")
-urla=load_data1()
+urla=load_data2()
 
 st.dataframe(urla, use_container_width=st.session_state.use_container_width)
 
