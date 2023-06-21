@@ -57,7 +57,7 @@ def get_total_dataframe(dataset):
     dataset.iloc[0]['deaths'],dataset.iloc[0]['active'])})
     return total_dataframe
 
-state_total = get_total_dataframe(state_data)
+state_total = get_total_dataframe(url_a)
 
 if st.sidebar.checkbox("Show Analysis by State", True, key=2):
     st.markdown("## **State level analysis**")
