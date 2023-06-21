@@ -46,7 +46,7 @@ st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Las disposiciones del 
 def load_data1():
          url_a="https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_APROBADO.csv"
          return pd.read_csv(url_a, sep=",")
-
+daprov=load_data1()
 def load_data2():
          url_d="https://github.com/taipeximena/PROGRA_PROY/blob/main/Reporte_Proyecto_DESAPROBADO.csv"
          return pd.read_csv(url_d, sep=";")
