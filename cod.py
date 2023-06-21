@@ -51,7 +51,7 @@ chart_data = pd.DataFrame(
     np.random.randn(20, 3),
     columns=["a", "b", "c"])
 
-st.bar_chart(df)
+st.bar_chart(chart_data )
 def load_data2():
     urld="https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_APROBADO%20(3).csv"
     return pd.read_csv(urld,sep=',')
