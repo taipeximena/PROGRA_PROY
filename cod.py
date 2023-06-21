@@ -43,7 +43,7 @@ st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Las disposiciones del 
 
 #IMPORT DATA
  # Leer el archivo CSV o cualquier otro formato que desees
-df = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_APROBADO%20(3)%20(2).csv")
+df = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_DESAPROBADO%20(1).csv")
 # Mostrar el DataFrame en la aplicación de Streamlit
 st.write(df)
 freq = df.groupby(['ACTIVIDAD']).size() 
