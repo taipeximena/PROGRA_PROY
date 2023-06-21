@@ -43,19 +43,20 @@ st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Asimismo, regula las a
 st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Las disposiciones del PUPCA fueron aprobadas por Decreto Supremo N° 004-2022-MINAM en enero de este año. De este modo, reduce la dispersión normativa y contribuye a brindar un servicio de certificación ambiental ágil que garantice calidad y eficacia."}</h1>', unsafe_allow_html=True)
 
 #IMPORT DATA
-def load_data():
-    url="https://raw.githubusercontent.com/Frank10OC/proyecto/main/indices_soberanos%20(1).csv"
-    return pd.read_csv(url, sep= ',')
-df = load_data()
-st.markdown(f'<h1 style="color:#fafdfa;font-size:20px;">{"Datos Generales"}</h1>', unsafe_allow_html=True)
-st.dataframe(df, use_container_width=st.session_state.use_container_width)
-def load_data1():
+#def load_data1():
     url_a="https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_APROBADO.csv"
     return pd.read_csv(url_a, sep=',')
 
 def load_data2():
-    urld="https://raw.githubusercontent.com/Frank10OC/Prog_Avanzada/main/indices_soberanos_f.csv"
-    return pd.read_csv(urld, sep=',')
+    url_d="https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_DESAPROBADO.csv"
+    return pd.read_csv(url_d, sep= ',')
+urld=load_data2()
+st.dataframe(urld, use_container_width=st.session_state.use_container_width)
+urlya="https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_DESAPROBADO.csv"
+c=pd.read_csv(urlya)
+
+
+
 
 def load_data3():
          url_e="https://github.com/taipeximena/PROGRA_PROY/blob/main/Reporte_Proyecto_EN%20EVALUACION.csv"
