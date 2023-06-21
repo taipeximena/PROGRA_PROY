@@ -43,14 +43,18 @@ st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Asimismo, regula las a
 st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Las disposiciones del PUPCA fueron aprobadas por Decreto Supremo N° 004-2022-MINAM en enero de este año. De este modo, reduce la dispersión normativa y contribuye a brindar un servicio de certificación ambiental ágil que garantice calidad y eficacia."}</h1>', unsafe_allow_html=True)
 
 #IMPORT DATA
-def load_data():
+def load_data1():
    url_a="https://github.com/taipeximena/PROGRA_PROY/blob/main/Reporte_Proyecto_APROBADO.csv"
+      return pd.read_csv(url, sep=",")
+
+def load_data2():
    url_d="https://github.com/taipeximena/PROGRA_PROY/blob/main/Reporte_Proyecto_DESAPROBADO.csv"
+      return pd.read_csv(url, sep=",")
+
+def load_data3():
    url_e="https://github.com/taipeximena/PROGRA_PROY/blob/main/Reporte_Proyecto_EN%20EVALUACION.csv"
-   return pd.read_csv(url, sep=",")
-url_a=load_data()
-url_d=load_data()
-url_e=load_data()
+      return pd.read_csv(url, sep=",")
+
 def get_total_dataframe(dataset):
     total_dataframe = pd.DataFrame({
     'Status':['Confirmed', 'Recovered', 'Deaths','Active'],
