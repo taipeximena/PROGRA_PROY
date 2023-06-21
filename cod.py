@@ -48,8 +48,8 @@ st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Las disposiciones del 
 def load_data2():
     urld="https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_DESAPROBADO.csv"
     return pd.read_csv(urld, sep= ',')
-urld=load_data2()
-st.dataframe(urld, use_container_width=st.session_state.use_container_width)
+url123=load_data2()
+st.dataframe(url123, use_container_width=st.session_state.use_container_width)
 urlya="https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_DESAPROBADO.csv"
 c=pd.read_csv(urlya)
 
