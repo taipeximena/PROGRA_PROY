@@ -49,8 +49,8 @@ df = pd.read_csv("https://raw.githubusercontent.com/Frank10OC/Prog_Avanzada/main
 st.write(df)
 
 def load_data2():
-    urld="https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_DESAPROBADO.csv"
-    return pd.read_csv(urld, sep= ',')
+    urld="hhttps://raw.githubusercontent.com/Frank10OC/Prog_Avanzada/main/fecha.csv"
+    return pd.read_csv(urld, sep= ';')
 url123=load_data2()
 st.dataframe(url123, use_container_width=st.session_state.use_container_width)
 urlya="https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_DESAPROBADO.csv"
