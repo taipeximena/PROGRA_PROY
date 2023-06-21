@@ -47,11 +47,7 @@ st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Las disposiciones del 
 df = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_APROBADO%20(3)%20(2).csv")
 # Mostrar el DataFrame en la aplicación de Streamlit
 st.write(df)
-chart_data = pd.DataFrame(
-    np.random.randn(20, 3),
-    columns=["a", "b", "c"])
-
-st.bar_chart(chart_data )
+st.bar_chart(data=df, *, x="ACTIVIDAD", y=df.groupby([x]).count(), ancho=0, alto=0, use_container_width=Verdadero)
 def load_data2():
     urld="https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_APROBADO%20(3).csv"
     return pd.read_csv(urld,sep=',')
