@@ -55,7 +55,9 @@ def load_data3():
          url_e="https://github.com/taipeximena/PROGRA_PROY/blob/main/Reporte_Proyecto_EN%20EVALUACION.csv"
          return pd.read_csv(url_e, sep=";")
 
-urla=load_data1()
+url_a="https://github.com/taipeximena/PROGRA_PROY/blob/main/Reporte_Proyecto_APROBADO.csv"
+urla=pd.read_csv(url_a)
+
 st.dataframe(urla, use_container_width=st.session_state.use_container_width)
 
 st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"BIBLIOGRAFÍA"}</h1>', unsafe_allow_html=True)
