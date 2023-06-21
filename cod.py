@@ -49,7 +49,28 @@ def load_data():
    url_e="https://github.com/taipeximena/PROGRA_PROY/blob/main/Reporte_Proyecto_EN%20EVALUACION.csv"
    return pd.read_csv(url, sep=",")
 
+def get_total_dataframe(dataset):
+    total_dataframe = pd.DataFrame({
+    'Status':['Confirmed', 'Recovered', 'Deaths','Active'],
+    'Number of cases':(dataset.iloc[0]['confirmed'],
+    dataset.iloc[0]['recovered'], 
+    dataset.iloc[0]['deaths'],dataset.iloc[0]['active'])})
+    return total_dataframe
 
+state_total = get_total_dataframe(state_data)
+
+if st.sidebar.checkbox("Show Analysis by State", True, key=2):
+    st.markdown("## **State level analysis**")
+    st.markdown("### Overall Confirmed, Active, Recovered and " +
+    "Deceased cases in %s yet" % (select))
+    if not st.checkbox('Hide Graph', False, key=1):
+        state_total_graph = px.bar(
+        state_total, 
+        x='Status',
+        y='Number of cases',
+        labels={'Number of cases':'Number of cases in %s' % (select)},
+        color="Status")
+        st.plotly_chart(state_total_graph)
 
 st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"BIBLIOGRAFÍA"}</h1>', unsafe_allow_html=True)
 st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Certificación Ambiental. (s. f.). Sistema Nacional de Evaluación de Impacto Ambiental. https://www.minam.gob.pe/seia/que-es-la-certificacion-ambiental/"}</h1>', unsafe_allow_html=True)
