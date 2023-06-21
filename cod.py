@@ -55,7 +55,7 @@ def load_data3():
    url_e="https://github.com/taipeximena/PROGRA_PROY/blob/main/Reporte_Proyecto_EN%20EVALUACION.csv"
       return pd.read_csv(url_e, sep=";")
 
-url_a=load_data1()
+urla=load_data1()
 def get_total_dataframe(dataset):
     total_dataframe = pd.DataFrame({
     'Status':['Confirmed', 'Recovered', 'Deaths','Active'],
@@ -64,7 +64,7 @@ def get_total_dataframe(dataset):
     dataset.iloc[0]['deaths'],dataset.iloc[0]['active'])})
     return total_dataframe
 
-state_total = get_total_dataframe(url_a)
+state_total = get_total_dataframe(urla)
 
 if st.sidebar.checkbox("Show Analysis by State", True, key=2):
     st.markdown("## **State level analysis**")
