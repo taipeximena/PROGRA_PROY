@@ -42,3 +42,9 @@ st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"El PUPCA regula 10 pro
 st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Asimismo, regula las acciones de acompañamiento y el proceso de participación ciudadana,  promoviendo la eficiencia y transparencia de la gestión ambiental a cargo del Senace."}</h1>', unsafe_allow_html=True)
 st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Las disposiciones del PUPCA fueron aprobadas por Decreto Supremo N° 004-2022-MINAM en enero de este año. De este modo, reduce la dispersión normativa y contribuye a brindar un servicio de certificación ambiental ágil que garantice calidad y eficacia."}</h1>', unsafe_allow_html=True)
 
+
+
+
+st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"BIBLIOGRAFÍA"}</h1>', unsafe_allow_html=True)
+st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Certificación Ambiental. (s. f.). Sistema Nacional de Evaluación de Impacto Ambiental. https://www.minam.gob.pe/seia/que-es-la-certificacion-ambiental/"}</h1>', unsafe_allow_html=True)
+st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Hoy entra en vigencia nuevo procedimiento único de certificación ambiental del Senace. (s. f.). Noticias - Servicio Nacional de Certificación Ambiental para las Inversiones Sostenibles - Plataforma del Estado Peruano. https://www.gob.pe/institucion/senace/noticias/633916-hoy-entra-en-vigencia-nuevo-procedimiento-unico-de-certificacion-ambiental-del-senace"}</h1>', unsafe_allow_html=True)
