@@ -44,12 +44,12 @@ st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Las disposiciones del 
 
 #IMPORT DATA
 #def load_data1():
-    url_a="https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_APROBADO.csv"
+    urla="https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_APROBADO.csv"
     return pd.read_csv(url_a, sep=',')
 
 def load_data2():
-    url_d="https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_DESAPROBADO.csv"
-    return pd.read_csv(url_d, sep= ',')
+    urld="https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_DESAPROBADO.csv"
+    return pd.read_csv(urld, sep= ',')
 urld=load_data2()
 st.dataframe(urld, use_container_width=st.session_state.use_container_width)
 urlya="https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_DESAPROBADO.csv"
