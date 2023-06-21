@@ -49,8 +49,8 @@ def load_data1():
 daprov=load_data1()
 
 def load_data2():
-         url_d="https://github.com/taipeximena/PROGRA_PROY/blob/main/Reporte_Proyecto_DESAPROBADO.csv"
-         return pd.read_csv(url_d, sep=";")
+    url_d="https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_DESAPROBADO.csv"
+    return pd.read_csv(url_d, sep=";")
 
 def load_data3():
          url_e="https://github.com/taipeximena/PROGRA_PROY/blob/main/Reporte_Proyecto_EN%20EVALUACION.csv"
