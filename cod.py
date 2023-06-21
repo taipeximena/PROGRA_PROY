@@ -54,7 +54,7 @@ def load_data2():
 def load_data3():
    url_e="https://github.com/taipeximena/PROGRA_PROY/blob/main/Reporte_Proyecto_EN%20EVALUACION.csv"
       return pd.read_csv(url, sep=",")
-
+url_a=load_data1()
 def get_total_dataframe(dataset):
     total_dataframe = pd.DataFrame({
     'Status':['Confirmed', 'Recovered', 'Deaths','Active'],
