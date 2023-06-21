@@ -47,7 +47,7 @@ df = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main
 # Mostrar el DataFrame en la aplicación de Streamlit
 st.write(df)
 freq = df.groupby(['ACTIVIDAD']).count() 
-print(freq)
+st.write(freq)
 st.bar_chart(data=df,x="ACTIVIDAD",y="ID")
 def load_data2():
     urld="https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_APROBADO%20(3).csv"
