@@ -45,11 +45,11 @@ st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Las disposiciones del 
 #IMPORT DATA
 def load_data1():
     url_a="https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_APROBADO.csv"
-    return pd.read_csv(url_a, sep=",")
+    return pd.read_csv(url_a, sep=',')
 
 def load_data2():
     urld="https://raw.githubusercontent.com/Frank10OC/Prog_Avanzada/main/indices_soberanos_f.csv"
-    return pd.read_csv(urld, sep=",")
+    return pd.read_csv(urld, sep=',')
 
 def load_data3():
          url_e="https://github.com/taipeximena/PROGRA_PROY/blob/main/Reporte_Proyecto_EN%20EVALUACION.csv"
