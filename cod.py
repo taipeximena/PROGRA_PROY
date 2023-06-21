@@ -44,7 +44,15 @@ st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Las disposiciones del 
 
 #IMPORT DATA
 
-
+def main():
+    st.title("Aplicación para mostrar un DataFrame")
+    
+    # Leer el archivo CSV o cualquier otro formato que desees
+    df = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_DESAPROBADO.csv")
+    
+    # Mostrar el DataFrame en la aplicación de Streamlit
+    st.write(df)
+d=main()
 def load_data2():
     urld="https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_DESAPROBADO.csv"
     return pd.read_csv(urld, sep= ',')
