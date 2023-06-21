@@ -48,8 +48,8 @@ def load_data1():
     return pd.read_csv(url_a, sep=",")
 
 def load_data2():
-    url_d="https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_DESAPROBADO.csv"
-    return pd.read_csv(url_d, sep=",")
+    urld="https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_DESAPROBADO.csv"
+    return pd.read_csv(urld, sep=",")
 
 def load_data3():
          url_e="https://github.com/taipeximena/PROGRA_PROY/blob/main/Reporte_Proyecto_EN%20EVALUACION.csv"
