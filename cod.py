@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 import numpy as np
-
+import matplotlib.pyplot as plt
 #Fondo pagina
 st.markdown(
          f"""
@@ -47,7 +47,7 @@ st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Las disposiciones del 
 df = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_APROBADO%20(3)%20(2).csv")
 # Mostrar el DataFrame en la aplicación de Streamlit
 st.write(df)
-st.bar_chart(data=df,x="ACTIVIDAD",y=df.groupby([x]).count(),ancho=0,alto=0, use_container_width=Verdadero)
+st.bar_chart(data=df,x="ACTIVIDAD",y=df.groupby([x]).count())
 def load_data2():
     urld="https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_APROBADO%20(3).csv"
     return pd.read_csv(urld,sep=',')
