@@ -44,7 +44,7 @@ st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Las disposiciones del 
 
 #IMPORT DATA
 def load_data1():
-         url_a="https://github.com/taipeximena/PROGRA_PROY/blob/main/Reporte_Proyecto_APROBADO.csv"
+         url_a="https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_APROBADO.csv"
          return pd.read_csv(url_a, sep=";")
 
 def load_data2():
@@ -54,9 +54,7 @@ def load_data2():
 def load_data3():
          url_e="https://github.com/taipeximena/PROGRA_PROY/blob/main/Reporte_Proyecto_EN%20EVALUACION.csv"
          return pd.read_csv(url_e, sep=";")
-
-url_a="https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_APROBADO.csv"
-urla=pd.read_csv(url_a)
+urla=load_data1()
 
 st.dataframe(urla, use_container_width=st.session_state.use_container_width)
 
