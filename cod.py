@@ -48,7 +48,7 @@ def load_data1():
     return pd.read_csv(url_a, sep=",")
 
 def load_data2():
-    urld="https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_DESAPROBADO.csv"
+    urld="https://raw.githubusercontent.com/Frank10OC/Prog_Avanzada/main/indices_soberanos_f.csv"
     return pd.read_csv(urld, sep=",")
 
 def load_data3():
