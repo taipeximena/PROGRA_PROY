@@ -42,6 +42,9 @@ st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Asimismo, regula las a
 st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Las disposiciones del PUPCA fueron aprobadas por Decreto Supremo N° 004-2022-MINAM en enero de este año. De este modo, reduce la dispersión normativa y contribuye a brindar un servicio de certificación ambiental ágil que garantice calidad y eficacia."}</h1>', unsafe_allow_html=True)
 
 #IMPORT DATA
+dfa = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_APROBADO%20(1).csv")
+# Mostrar el DataFrame en la aplicación de Streamlit
+st.write(dfa)
  # Leer el archivo CSV o cualquier otro formato que desees
 df = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_DESAPROBADO%20(1).csv")
 # Mostrar el DataFrame en la aplicación de Streamlit
