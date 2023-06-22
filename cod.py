@@ -42,19 +42,23 @@ st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Asimismo, regula las a
 st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Las disposiciones del PUPCA fueron aprobadas por Decreto Supremo N° 004-2022-MINAM en enero de este año. De este modo, reduce la dispersión normativa y contribuye a brindar un servicio de certificación ambiental ágil que garantice calidad y eficacia."}</h1>', unsafe_allow_html=True)
 
 #IMPORT DATA
+#aprobados
 dfa = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_APROBADO%20(2).csv")
 # Mostrar el DataFrame en la aplicación de Streamlit
 st.write(dfa)
- # Leer el archivo CSV o cualquier otro formato que desees
+
+ #desaprobados
 dfd = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_DESAPROBADO%20(1).csv")
 # Mostrar el DataFrame en la aplicación de Streamlit
 st.write(dfd)
-freq = df.groupby(['ACTIVIDAD']).size() 
-st.write(freq)
-st.bar_chart(data=df,x="ACTIVIDAD",y="ID")
+#evaluacion
 dfe = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_EN-EVALUACION.csv")
 # Mostrar el DataFrame en la aplicación de Streamlit
 st.write(dfe)
+
+freq = df.groupby(['ACTIVIDAD']).size() 
+st.write(freq)
+st.bar_chart(data=df,x="ACTIVIDAD",y="ID")
 
 st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"BIBLIOGRAFÍA"}</h1>', unsafe_allow_html=True)
 st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Certificación Ambiental. (s. f.). Sistema Nacional de Evaluación de Impacto Ambiental. https://www.minam.gob.pe/seia/que-es-la-certificacion-ambiental/"}</h1>', unsafe_allow_html=True)
