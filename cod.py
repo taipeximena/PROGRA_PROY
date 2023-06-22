@@ -43,15 +43,18 @@ st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Las disposiciones del 
 
 #IMPORT DATA
 #aprobados
+st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"Aprobados"}</h1>', unsafe_allow_html=True)
 dfa = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_APROBADO%20(2).csv")
 # Mostrar el DataFrame en la aplicación de Streamlit
 st.write(dfa)
 
  #desaprobados
+st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"Desaprobados"}</h1>', unsafe_allow_html=True)
 dfd = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_DESAPROBADO%20(1).csv")
 # Mostrar el DataFrame en la aplicación de Streamlit
 st.write(dfd)
 #evaluacion
+st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"Evaluación"}</h1>', unsafe_allow_html=True)
 dfe = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_EN-EVALUACION.csv")
 # Mostrar el DataFrame en la aplicación de Streamlit
 st.write(dfe)
