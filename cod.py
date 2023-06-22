@@ -59,10 +59,15 @@ dfe = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/mai
 # Mostrar el DataFrame en la aplicación de Streamlit
 st.write(dfe)
 
-freq = df.groupby(['ACTIVIDAD']).size() 
+freq = dfa.groupby(['ACTIVIDAD']).size() 
 st.write(freq)
-st.bar_chart(data=df,x="ACTIVIDAD",y="ID")
-
+st.bar_chart(data=dfa,x="ACTIVIDAD",y="ID")
+freq = dfd.groupby(['ACTIVIDAD']).size() 
+st.write(freq)
+st.bar_chart(data=dfd,x="ACTIVIDAD",y="ID")
+freq = dfe.groupby(['ACTIVIDAD']).size() 
+st.write(freq)
+st.bar_chart(data=dfe,x="ACTIVIDAD",y="ID")
 st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"BIBLIOGRAFÍA"}</h1>', unsafe_allow_html=True)
 st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Certificación Ambiental. (s. f.). Sistema Nacional de Evaluación de Impacto Ambiental. https://www.minam.gob.pe/seia/que-es-la-certificacion-ambiental/"}</h1>', unsafe_allow_html=True)
 st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Hoy entra en vigencia nuevo procedimiento único de certificación ambiental del Senace. (s. f.). Noticias - Servicio Nacional de Certificación Ambiental para las Inversiones Sostenibles - Plataforma del Estado Peruano. https://www.gob.pe/institucion/senace/noticias/633916-hoy-entra-en-vigencia-nuevo-procedimiento-unico-de-certificacion-ambiental-del-senace"}</h1>', unsafe_allow_html=True)
