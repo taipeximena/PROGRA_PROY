@@ -46,29 +46,15 @@ dfa = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/mai
 # Mostrar el DataFrame en la aplicación de Streamlit
 st.write(dfa)
  # Leer el archivo CSV o cualquier otro formato que desees
-df = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_DESAPROBADO%20(1).csv")
+dfd = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_DESAPROBADO%20(1).csv")
 # Mostrar el DataFrame en la aplicación de Streamlit
-st.write(df)
+st.write(dfd)
 freq = df.groupby(['ACTIVIDAD']).size() 
 st.write(freq)
 st.bar_chart(data=df,x="ACTIVIDAD",y="ID")
-def load_data2():
-    urld="https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_APROBADO%20(3).csv"
-    return pd.read_csv(urld,sep=',')
-url123=load_data2()
-st.dataframe(url123, use_container_width=st.session_state.use_container_width)
-urlya="https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_DESAPROBADO.csv"
-c=pd.read_csv(urlya)
-
-
-
-
-def load_data3():
-         url_e="https://github.com/taipeximena/PROGRA_PROY/blob/main/Reporte_Proyecto_EN%20EVALUACION.csv"
-         return pd.read_csv(url_e, sep=";")
-urla=load_data2()
-
-st.dataframe(urla, use_container_width=st.session_state.use_container_width)
+dfe = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_EN-EVALUACION.csv")
+# Mostrar el DataFrame en la aplicación de Streamlit
+st.write(dfe)
 
 st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"BIBLIOGRAFÍA"}</h1>', unsafe_allow_html=True)
 st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Certificación Ambiental. (s. f.). Sistema Nacional de Evaluación de Impacto Ambiental. https://www.minam.gob.pe/seia/que-es-la-certificacion-ambiental/"}</h1>', unsafe_allow_html=True)
