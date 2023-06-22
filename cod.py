@@ -42,9 +42,10 @@ st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Asimismo, regula las a
 st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Las disposiciones del PUPCA fueron aprobadas por Decreto Supremo N° 004-2022-MINAM en enero de este año. De este modo, reduce la dispersión normativa y contribuye a brindar un servicio de certificación ambiental ágil que garantice calidad y eficacia."}</h1>', unsafe_allow_html=True)
 
 #IMPORT DATA
+
 #aprobados
 st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"Aprobados"}</h1>', unsafe_allow_html=True)
-dfa = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_APROBADO%20(2).csv")
+dfa = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_APROBADO%20(OK).csv")
 # Mostrar el DataFrame en la aplicación de Streamlit
 st.write(dfa)
 
@@ -53,6 +54,7 @@ st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"Desaprobados"}</h1>', 
 dfd = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_DESAPROBADO%20(1).csv")
 # Mostrar el DataFrame en la aplicación de Streamlit
 st.write(dfd)
+
 #evaluacion
 st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"Evaluación"}</h1>', unsafe_allow_html=True)
 dfe = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_EN-EVALUACION.csv")
@@ -68,6 +70,7 @@ st.bar_chart(data=dfd,x="ACTIVIDAD",y="ID")
 freq3= dfe.groupby(['ACTIVIDAD']).size() 
 st.bar_chart(freq3)
 st.bar_chart(data=dfe,x="ACTIVIDAD",y="ID")
+
 st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"BIBLIOGRAFÍA"}</h1>', unsafe_allow_html=True)
 st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Certificación Ambiental. (s. f.). Sistema Nacional de Evaluación de Impacto Ambiental. https://www.minam.gob.pe/seia/que-es-la-certificacion-ambiental/"}</h1>', unsafe_allow_html=True)
 st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Hoy entra en vigencia nuevo procedimiento único de certificación ambiental del Senace. (s. f.). Noticias - Servicio Nacional de Certificación Ambiental para las Inversiones Sostenibles - Plataforma del Estado Peruano. https://www.gob.pe/institucion/senace/noticias/633916-hoy-entra-en-vigencia-nuevo-procedimiento-unico-de-certificacion-ambiental-del-senace"}</h1>', unsafe_allow_html=True)
