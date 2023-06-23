@@ -72,7 +72,12 @@ st.bar_chart(freq3)
 
 # BÚSQUEDA DE ESTADO DE TRÁMITE DE CERTIFICACIÓN AMBIENTAL POR NOMBRE DE A EMPRESA
 st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"ESTADO DE TRÁMITE"}</h1>', unsafe_allow_html=True)
-palabra = st.text_input("Ingrese nombre de su empresa o titular.")
+col1tramite, col2tramite = st.columns(2)
+with col1tramite:
+   st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Ingrese nombre de su empresa o titular."}</h1>', unsafe_allow_html=True)
+  
+with col2tramite:
+   palabra = st.text_input("")
 
 # Realizar la búsqueda en cada archivo
 resultados_dfa = dfa[dfa.apply(lambda row: palabra in row.values, axis=1)]
