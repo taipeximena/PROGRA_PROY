@@ -62,15 +62,15 @@ st.write(dfe)
 
 freq = dfa.groupby(['ACTIVIDAD']).size() 
 st.bar_chart(freq)
-st.bar_chart(data=dfa,x="TITULO_PROYECTO",y="ACTIVIDAD")
+#st.bar_chart(data=dfa,x="TITULO_PROYECTO",y="ACTIVIDAD")
 
 freq2 = dfd.groupby(['ACTIVIDAD']).size() 
 st.bar_chart(freq2)
-st.bar_chart(data=dfd,x="ACTIVIDAD",y="ID")
+#st.bar_chart(data=dfd,x="ACTIVIDAD",y="ID")
 
 freq3= dfe.groupby(['ACTIVIDAD']).size() 
 st.bar_chart(freq3)
-st.bar_chart(data=dfe,x="ACTIVIDAD",y="ID")
+#st.bar_chart(data=dfe,x="ACTIVIDAD",y="ID")
 
 st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"BIBLIOGRAFÍA"}</h1>', unsafe_allow_html=True)
 st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Certificación Ambiental. (s. f.). Sistema Nacional de Evaluación de Impacto Ambiental. https://www.minam.gob.pe/seia/que-es-la-certificacion-ambiental/"}</h1>', unsafe_allow_html=True)
