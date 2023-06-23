@@ -60,7 +60,7 @@ st.write(dfe)
 
 st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"Gráfica: N° de casos aprobados según actividad"}</h1>', unsafe_allow_html=True)
 freq1 = dfa.groupby(['ACTIVIDAD']).size() 
-st.bar_chart(freq)
+st.bar_chart(freq1)
 st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"Gráfica: N° de casos desaprobados según actividad"}</h1>', unsafe_allow_html=True)
 freq2 = dfd.groupby(['ACTIVIDAD']).size() 
 st.bar_chart(freq2)
