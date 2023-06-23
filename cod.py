@@ -93,7 +93,7 @@ if not resultados_dfe.empty:
 
 # Mostrar mensaje si no se encuentran resultados
 if resultados_archivo1.empty and resultados_archivo2.empty and resultados_archivo3.empty:
-    st.write("No se encontraron resultados.")st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"No se encontraron resultados."}</h1>', unsafe_allow_html=True)
+    st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"No se encontraron resultados."}</h1>', unsafe_allow_html=True)
          
 
 
