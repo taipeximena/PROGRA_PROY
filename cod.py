@@ -42,6 +42,24 @@ st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Asimismo, regula las a
 st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Las disposiciones del PUPCA fueron aprobadas por Decreto Supremo N° 004-2022-MINAM en enero de este año. De este modo, reduce la dispersión normativa y contribuye a brindar un servicio de certificación ambiental ágil que garantice calidad y eficacia."}</h1>', unsafe_allow_html=True)
 
 #IMPORT DATA
+import streamlit as st
+import json
+
+def main():
+    st.title("Lector de archivos JSON")
+
+    # Cargar el archivo JSON
+    file = st.file_uploader("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_APROBADO.json", type=["json"])
+    if file is not None:
+        content = file.read()
+        try:
+            data = json.loads(content)
+            st.write("Contenido del archivo JSON:")
+            st.json(data)
+        except json.JSONDecodeError:
+            st.error("Error al decodificar el archivo JSON.")
+            
+a=main()
 
 #aprobados
 st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"Aprobados"}</h1>', unsafe_allow_html=True)
