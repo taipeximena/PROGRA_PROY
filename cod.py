@@ -44,23 +44,7 @@ st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Las disposiciones del 
 #IMPORT DATA
 import streamlit as st
 import json
-
-def main():
-    st.title("Lector de archivos JSON")
-
-    # Cargar el archivo JSON
-    file = st.file_uploader("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_APROBADO.json", type=["json"])
-    if file is not None:
-        content = file.read()
-        try:
-            data = json.loads(content)
-            st.write("Contenido del archivo JSON:")
-            st.json(data)
-        except json.JSONDecodeError:
-            st.error("Error al decodificar el archivo JSON.")
-            
-a=main()
-
+st.json("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_APROBADO.json")
 #aprobados
 st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"Aprobados"}</h1>', unsafe_allow_html=True)
 dfa = pd.read_csv("https://datosabiertos.senace.gob.pe/home/VistaDatos/carteraproyectos?dataset=ESTUDIOS%20AMBIENTALES%20(APROBADO)&id=1&q=APROBADO#data")
