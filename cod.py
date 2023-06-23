@@ -50,13 +50,13 @@ dfa = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/mai
 st.write(dfa)
 #desaprobados
 st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"Desaprobados"}</h1>', unsafe_allow_html=True)
-dfd = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_DESAPROBADO%20(1).csv")
+dfd = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_DESAPROBADO.csv")
 # Mostrar el DataFrame en la aplicación de Streamlit
 st.write(dfd)
 
 #evaluacion
 st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"Evaluación"}</h1>', unsafe_allow_html=True)
-dfe = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_EN-EVALUACION.csv")
+dfe = pd.read_csv("https://github.com/taipeximena/PROGRA_PROY/raw/main/Reporte_Proyecto_EN%20EVALUACION.csv")
 # Mostrar el DataFrame en la aplicación de Streamlit
 st.write(dfe)
 
