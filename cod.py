@@ -72,6 +72,38 @@ freq3= dfe.groupby(['ACTIVIDAD']).size()
 st.bar_chart(freq3)
 #st.bar_chart(data=dfe,x="ACTIVIDAD",y="ID")
 
+# Cargar los archivos de datos
+archivo1 = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_APROBADO%20(4).csv")
+archivo2 = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_DESAPROBADO.csv")
+archivo3 = pd.read_csv("https://github.com/taipeximena/PROGRA_PROY/raw/main/Reporte_Proyecto_EN%20EVALUACION.csv")
+
+# Título de la página
+st.title("Búsqueda de nombres en archivos")
+
+# Entrada de texto para el nombre
+nombre = st.text_input("Ingrese un nombre")
+
+# Realizar la búsqueda en el archivo 1
+resultados_archivo1 = archivo1[archivo1["Nombre"] == nombre]
+# Realizar la búsqueda en el archivo 2
+resultados_archivo2 = archivo2[archivo2["Nombre"] == nombre]
+# Realizar la búsqueda en el archivo 3
+resultados_archivo3 = archivo3[archivo3["Nombre"] == nombre]
+# Mostrar los resultados según el archivo
+st.header("Resultados:")
+if not resultados_archivo1.empty:
+    st.subheader("Archivo 1:")
+    st.write(resultados_archivo1)
+if not resultados_archivo2.empty:
+    st.subheader("Archivo 2:")
+    st.write(resultados_archivo2)
+if not resultados_archivo3.empty:
+    st.subheader("Archivo 3:")
+    st.write(resultados_archivo3)
+
+# Mostrar mensaje si no se encuentran resultados
+if resultados_archivo1.empty and resultados_archivo2.empty and resultados_archivo3.empty:
+    st.write("No se encontraron resultados.")
 st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"BIBLIOGRAFÍA"}</h1>', unsafe_allow_html=True)
 st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Certificación Ambiental. (s. f.). Sistema Nacional de Evaluación de Impacto Ambiental. https://www.minam.gob.pe/seia/que-es-la-certificacion-ambiental/"}</h1>', unsafe_allow_html=True)
 st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Hoy entra en vigencia nuevo procedimiento único de certificación ambiental del Senace. (s. f.). Noticias - Servicio Nacional de Certificación Ambiental para las Inversiones Sostenibles - Plataforma del Estado Peruano. https://www.gob.pe/institucion/senace/noticias/633916-hoy-entra-en-vigencia-nuevo-procedimiento-unico-de-certificacion-ambiental-del-senace"}</h1>', unsafe_allow_html=True)
