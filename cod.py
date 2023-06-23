@@ -42,7 +42,6 @@ st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Asimismo, regula las a
 st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Las disposiciones del PUPCA fueron aprobadas por Decreto Supremo N° 004-2022-MINAM en enero de este año. De este modo, reduce la dispersión normativa y contribuye a brindar un servicio de certificación ambiental ágil que garantice calidad y eficacia."}</h1>', unsafe_allow_html=True)
 
 #IMPORT DATA
-
 #aprobados
 st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"Aprobados"}</h1>', unsafe_allow_html=True)
 dfa = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_APROBADO%20(4).csv")
@@ -53,7 +52,6 @@ st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"Desaprobados"}</h1>', 
 dfd = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_DESAPROBADO.csv")
 # Mostrar el DataFrame en la aplicación de Streamlit
 st.write(dfd)
-
 #evaluacion
 st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"Evaluación"}</h1>', unsafe_allow_html=True)
 dfe = pd.read_csv("https://github.com/taipeximena/PROGRA_PROY/raw/main/Reporte_Proyecto_EN%20EVALUACION.csv")
@@ -72,32 +70,31 @@ freq3= dfe.groupby(['ACTIVIDAD']).size()
 st.bar_chart(freq3)
 #st.bar_chart(data=dfe,x="ACTIVIDAD",y="ID")
 
-# Cargar los archivos de datos
-archivo1 = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_APROBADO%20(4).csv")
-archivo2 = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_DESAPROBADO.csv")
-archivo3 = pd.read_csv("https://github.com/taipeximena/PROGRA_PROY/raw/main/Reporte_Proyecto_EN%20EVALUACION.csv")
-palabra = st.text_input("Ingrese una palabra")
+# BÚSQUEDA DE ESTADO DE TRÁMITE DE CERTIFICACIÓN AMBIENTAL POR NOMBRE DE A EMPRESA
+st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"ESTADO DE TRÁMITE"}</h1>', unsafe_allow_html=True)
+palabra = st.text_input("Ingrese el nombre de su empresa o titular")
 
 # Realizar la búsqueda en cada archivo
-resultados_archivo1 = archivo1[archivo1.apply(lambda row: palabra in row.values, axis=1)]
-resultados_archivo2 = archivo2[archivo2.apply(lambda row: palabra in row.values, axis=1)]
-resultados_archivo3 = archivo3[archivo3.apply(lambda row: palabra in row.values, axis=1)]
+resultados_dfa = dfa[dfa.apply(lambda row: palabra in row.values, axis=1)]
+resultados_dfd = dfd[dfd.apply(lambda row: palabra in row.values, axis=1)]
+resultados_dfe = dfe[dfe.apply(lambda row: palabra in row.values, axis=1)]
 
 # Mostrar los resultados según el archivo
-st.header("Resultados:")
-if not resultados_archivo1.empty:
-    st.subheader("APROBADO")
-    st.write(resultados_archivo1)
-if not resultados_archivo2.empty:
-    st.subheader("DESAPROBADO")
-    st.write(resultados_archivo2)
-if not resultados_archivo3.empty:
-    st.subheader("EN EVALUACIÓN")
-    st.write(resultados_archivo3)
+st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Resultados:"}</h1>', unsafe_allow_html=True)
+if not resultados_dfa.empty:
+    st.markdown(f'<h1 style="color:green;font-size:15px;">{"APROBADO"}</h1>', unsafe_allow_html=True)
+    st.write(resultados_dfa)
+if not resultados_dfd.empty:
+    st.markdown(f'<h1 style="color:red;font-size:15px;">{"DESAPROBADO"}</h1>', unsafe_allow_html=True)
+    st.write(resultados_dfd)
+if not resultados_dfe.empty:
+    st.markdown(f'<h1 style="color:yellow;font-size:15px;">{"EN EVALUACIÓN"}</h1>', unsafe_allow_html=True)
+    st.write(resultados_dfe)
 
 # Mostrar mensaje si no se encuentran resultados
 if resultados_archivo1.empty and resultados_archivo2.empty and resultados_archivo3.empty:
-    st.write("No se encontraron resultados.")
+    st.write("No se encontraron resultados.")st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"No se encontraron resultados."}</h1>', unsafe_allow_html=True)
+         
 
 
 st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"BIBLIOGRAFÍA"}</h1>', unsafe_allow_html=True)
