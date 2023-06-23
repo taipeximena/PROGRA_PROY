@@ -62,7 +62,7 @@ st.write(dfe)
 
 freq = dfa.groupby(['ACTIVIDAD']).size() 
 st.bar_chart(freq)
-st.bar_chart(data=dfa,x="ACTIVIDAD",y="TITULO_PROYECTO")
+st.bar_chart(data=dfa,x="TITULO_PROYECTO",y="ACTIVIDAD")
 
 freq2 = dfd.groupby(['ACTIVIDAD']).size() 
 st.bar_chart(freq2)
