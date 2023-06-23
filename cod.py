@@ -58,17 +58,15 @@ dfe = pd.read_csv("https://github.com/taipeximena/PROGRA_PROY/raw/main/Reporte_P
 # Mostrar el DataFrame en la aplicación de Streamlit
 st.write(dfe)
 
-freq = dfa.groupby(['ACTIVIDAD']).size() 
+st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"Gráfica: N° de casos aprobados según actividad"}</h1>', unsafe_allow_html=True)
+freq1 = dfa.groupby(['ACTIVIDAD']).size() 
 st.bar_chart(freq)
-#st.bar_chart(data=dfa,x="TITULO_PROYECTO",y="ACTIVIDAD")
-
+st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"Gráfica: N° de casos desaprobados según actividad"}</h1>', unsafe_allow_html=True)
 freq2 = dfd.groupby(['ACTIVIDAD']).size() 
 st.bar_chart(freq2)
-#st.bar_chart(data=dfd,x="ACTIVIDAD",y="ID")
-
+st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"Gráfica: N° de casos en envaluación según actividad"}</h1>', unsafe_allow_html=True)
 freq3= dfe.groupby(['ACTIVIDAD']).size() 
 st.bar_chart(freq3)
-#st.bar_chart(data=dfe,x="ACTIVIDAD",y="ID")
 
 # BÚSQUEDA DE ESTADO DE TRÁMITE DE CERTIFICACIÓN AMBIENTAL POR NOMBRE DE A EMPRESA
 st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"ESTADO DE TRÁMITE"}</h1>', unsafe_allow_html=True)
