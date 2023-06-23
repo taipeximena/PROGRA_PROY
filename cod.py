@@ -45,7 +45,7 @@ st.markdown(f'<h1 style="color:#fafdfa;font-size:15px;">{"Las disposiciones del 
 
 #aprobados
 st.markdown(f'<h1 style="color:#fafdfa;font-size:30px;">{"Aprobados"}</h1>', unsafe_allow_html=True)
-dfa = pd.read_csv("https://raw.githubusercontent.com/taipeximena/PROGRA_PROY/main/Reporte_Proyecto_APROBADO-XYZ.csv")
+dfa = pd.read_csv("https://datosabiertos.senace.gob.pe/home/VistaDatos/carteraproyectos?dataset=ESTUDIOS%20AMBIENTALES%20(APROBADO)&id=1&q=APROBADO#data")
 # Mostrar el DataFrame en la aplicación de Streamlit
 st.write(dfa)
 
