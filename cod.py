@@ -29,7 +29,7 @@ with col2:
 st.markdown(f'<h1 style="color:#fafdfa;font-size:50px;">{"Certificación Ambiental"}</h1>', unsafe_allow_html=True)
 st.image("https://cdn.www.gob.pe/uploads/document/file/3438583/standard_.jpg", width=600)
 #Integrantes
-st.markdown(f'<h1 style="color:#fafdfa;font-size:20px;">{"GRUPO 5"}</h1>', unsafe_allow_html=True)
+st.markdown(f'<h1 style="color:#fafdfa;font-size:20px;">{"GRUPO 8"}</h1>', unsafe_allow_html=True)
 st.markdown(f'<h1 style="color:#fafdfa;font-size:14px;">{"INTEGRANTES"}</h1>', unsafe_allow_html=True)
 st.markdown(f'<h1 style="color:#fafdfa;font-size:14px;">{"-Aliaga Goicochea, Andres"}</h1>', unsafe_allow_html=True)
 st.markdown(f'<h1 style="color:#fafdfa;font-size:14px;">{"-Castillo Ore, Lourdes"}</h1>', unsafe_allow_html=True)
